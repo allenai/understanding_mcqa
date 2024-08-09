@@ -1,0 +1,6 @@
+ai2-olmo==0.4.0
+datasets==2.20.0
+jsonlines==4.0.0
+matplotlib==3.9.1
+black==24.8.0 # for code formatting
+isort==5.13.2 # for code formatting
