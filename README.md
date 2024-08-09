@@ -39,9 +39,12 @@ python run_experiments.py
   --dataset {hellaswag, mmlu, prototypical_colors}
 ```
 For HellaSwag, add `--split val` to replicate the paper in running on the validation set.
-If you'd like to run experiments with the "A:__**B:__**" prompt format, add `--inverse`.
-For the "**C:__**D:__" prompt format, add `--cd_label_mapping`.
-For "C:__**D:__**", add both `--inverse` and `--cd_label_mapping`.
+
+For the "A:\_\_**B:**\_\_" prompt format instead of "**A:**\_\_B:\_\_", add `--inverse`.
+
+For the "**C:**\_\_D:\_\_" prompt format, add `--cd_label_mapping`.
+
+For "C:\_\_**D:**\_\_", add both `--inverse` and `--cd_label_mapping`.
 
 All results will write out to a `results/` directory in the root of the project. Add flag `--override` to overwrite existing results.
 
@@ -51,7 +54,7 @@ Add `--function calculate_acc`.
 ### Running Vocabulary Projection
 Add
 ```
-  --function {vocab_projection_coarse, vocab_projection_finegrained_mlpOutput, vocab_projection_finegrained_attnOutput, vocab_projection_finegrained_attnHeads}
+--function {vocab_projection_coarse, vocab_projection_finegrained_mlpOutput, vocab_projection_finegrained_attnOutput, vocab_projection_finegrained_attnHeads}
 ```
 
 ### Running Activation Patching
