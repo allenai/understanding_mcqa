@@ -33,6 +33,18 @@ class ModelWrapper(nn.Module):
     def layer_decode(self, hidden_states):
         raise Exception("Layer decode has to be implemented!")
 
+    def get_layers(self, tokens, **kwargs):
+        with torch.inference_mode():
+            # returns a tuple of, e.g., len(40) for 40 model layers, containing tensors of shape (batch_size, input_sequence_length, hidden_state_dim)
+            outputs = self.model(input_ids=tokens, output_hidden_states=True, **kwargs)
+
+        # per HF's convention, the final layer in the hidden_states tuple is the output logits *after* LN has been applied. we'll pass this in as an argument to the layer_decode argument to avoid applying LN 2x.
+        # returns list of len(num_layers) of tensors of shape (vocab_size, batch_size)
+        logits = self.layer_decode(outputs.hidden_states, ln_applied_last_layer=True)
+
+        # convert back to a tensor of shape (num_layers, vocab_size, batch_size)
+        return torch.stack(logits)
+
     def rr_per_layer(self, logits, answer_id, debug=False):
         # reciprocal rank of the answer at each layer
         # logits.shape = (num_layers, vocab_size, batch_size)
