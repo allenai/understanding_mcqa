@@ -1,3 +1,5 @@
+**NOTE: An updated version of this paper has been accepted as a spotlight to ICLR 2025 (see [pdf]()). This codebase has not yet been updated to reflect the new version of the paper, but I hope to do this before the conference. Please reach out to me via email if you are looking for the updated code.**
+
 This repository contains code for the arXiv preprint ["Answer, Assemble, Ace: Understanding How Transformers Answer Multiple Choice Questions"](https://arxiv.org/abs/2407.15018).
 
 I've cleaned this code up substantially from the version used to run the experiments in the paper, so if you have any replication issues, please open an issue or email me!
@@ -15,7 +17,7 @@ If you use this code or find our paper valuable, please cite:
 
 Some of this code is inspired by or modified from Kevin Meng's [memit codebase](https://github.com/kmeng01/memit) and Jack Merullo's [lm_vector_arithmetic codebase](https://github.com/jmerullo/lm_vector_arithmetic), and I have mentioned this explicitly in the docstrings of the relevant files.
 
-The Memory Colors dataset (`memory_colors.csv`) is extracted from [this paper's](https://aclanthology.org/2021.blackboxnlp-1.10.pdf) Appendix table.
+The Memory Colors dataset (`memory_colors.csv`) is extracted from [this paper's](https://aclanthology.org/2021.blackboxnlp-1.10.pdf) Appendix table and is also available [here](https://huggingface.co/datasets/sarahwie/copycolors_mcqa) as a HuggingFace dataset.
 
 ## Setup
 
