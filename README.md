@@ -2,16 +2,15 @@
 
 This repository contains code for the arXiv preprint ["Answer, Assemble, Ace: Understanding How Transformers Answer Multiple Choice Questions"](https://arxiv.org/abs/2407.15018).
 
-I've cleaned this code up substantially from the version used to run the experiments in the paper, so if you have any replication issues, please open an issue or email me!
-
 If you use this code or find our paper valuable, please cite:
 ```
-@unpublished{wiegreffe2024answer,
-  title={Answer, Assemble, Ace: Understanding How Transformers Answer Multiple Choice Questions},
-  author={Wiegreffe, Sarah and Tafjord, Oyvind, and Belinkov, Yonatan and Hajishirzi, Hannaneh and Sabharwal, Ashish},
-  year={2024},
-  note={arXiv:2107.15018},
-  url={https://arxiv.org/abs/2407.15018}
+@inproceedings{
+  wiegreffe2025answer,
+  title={Answer, Assemble, Ace: Understanding How {LM}s Answer Multiple Choice Questions},
+  author={Sarah Wiegreffe and Oyvind Tafjord and Yonatan Belinkov and Hannaneh Hajishirzi and Ashish Sabharwal},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=6NNA0MxhCH}
 }
 ```
 
