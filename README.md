@@ -1,4 +1,4 @@
-**NOTE: An updated version of this paper has been accepted as a spotlight to ICLR 2025 (see [here](https://openreview.net/forum?id=6NNA0MxhCH)). This codebase has not yet been updated to reflect the new version of the paper, but I hope to do this before the conference. Please reach out to me via email if you are looking for the updated code.**
+**NOTE: An updated version of this paper was published at ICLR 2025. This codebase is from an older version of the paper; please reach out to me via email if you are looking for the updated code.**
 
 This repository contains code for the arXiv preprint ["Answer, Assemble, Ace: Understanding How Transformers Answer Multiple Choice Questions"](https://arxiv.org/abs/2407.15018).
 
